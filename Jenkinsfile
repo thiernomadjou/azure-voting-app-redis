@@ -9,11 +9,11 @@ pipeline {
       }
       stage('Docker Build') {
          steps {
-            sh 'sudo -S docker images -a'
+            sh 'sudo -S MAAmstm7 docker images -a'
             sh '''cd azure-vote/
-                  sudo -S docker images -a
-                  sudo - S docker build -t jenkins-pipeline .
-                  sudo - S docker images -a
+                  sudo -S MAAmstm7 docker images -a
+                  sudo - S MAAmstm7 docker build -t jenkins-pipeline .
+                  sudo - S MAAmstm7 docker images -a
                   cd ..
                   '''
          }

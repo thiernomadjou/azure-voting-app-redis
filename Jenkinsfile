@@ -9,14 +9,13 @@ pipeline {
       }
       stage('Docker Build') {
          steps {
-            sh 'pwd'
-            // sh 'sudo docker images -a'
-            // sh '''cd azure-vote/
-            //       sudo docker images -a
-            //       sudo docker build -t jenkins-pipeline .
-            //       sudo docker images -a
-            //       cd ..
-            //       '''
+            sh 'sudo -S docker images -a'
+            sh '''cd azure-vote/
+                  sudo -S docker images -a
+                  sudo - S docker build -t jenkins-pipeline .
+                  sudo - S docker images -a
+                  cd ..
+                  '''
          }
       }
    }
